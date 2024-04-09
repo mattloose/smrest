@@ -67,7 +67,7 @@ bcftools filter -T COLO829.smrest_best_practice_called_regions.bed COLO829.smres
 
 ### Mutation calling (pipeline)
 
-A Snakemake pipeline is provided in `workflow/Snakemake` to automate these three steps. It will also parallelize the process across 10Mb segments of the genome. It assumes the BAM file is in `data/` (as in the demo data) and the pipeline can be run by building the `smrest_calls/<sample>/<sample>.whatshap.final_q20_pass_calls.vcf` target, where <sample> is the prefix of the BAM file. For example:
+A Snakemake pipeline is provided in `workflow/Snakemake` to automate these three steps. It will also parallelize the process across 10Mb segments of the genome. It assumes the BAM file is in `data/` (as in the demo data) and the pipeline can be run by building the `smrest_calls/<sample>/<sample>.whatshap.final_q20_pass_calls.vcf` target, where `<sample>` is the prefix of the BAM file. For example:
 
 ```
 snakemake smrest_calls/COLO829.mixture.chr20/COLO829.mixture.chr20.whatshap.final_q20_pass_calls.vcf
